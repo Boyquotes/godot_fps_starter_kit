@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Breakable.gd" type="Script" id=1]
+[ext_resource path="res://broken_breakable.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 5, 22, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 5, 1, 2 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -2.5, 11, 0.5, 2.5, 11, -0.5, 2.5, 11, 0.5, -2.5, 11, -0.5, -2.5, -11, 0.5, 2.5, -11, -0.5, 2.5, -11, 0.5, -2.5, -11, -0.5, 2.5, 11, 0.5, -2.5, 11, -0.5, 2.5, 11, -0.5, -2.5, 11, 0.5, 2.5, -11, 0.5, -2.5, -11, -0.5, 2.5, -11, -0.5, -2.5, -11, 0.5, 2.5, 11, 0.5, -2.5, -11, 0.5, -2.5, 11, 0.5, 2.5, -11, 0.5, 2.5, 11, -0.5, -2.5, -11, -0.5, -2.5, 11, -0.5, 2.5, -11, -0.5 )
+
+[node name="Breakable_Wallpiece2" type="Spatial"]
+
+[node name="Breakable" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0 )
+script = ExtResource( 1 )
+destroyed_breakable = ExtResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5529, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="Breakable"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Collision_Shape" type="CollisionShape" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5529, 0 )
+shape = SubResource( 3 )
+
+[node name="Broken_Breakable_Holder" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.11442, 0, 0 )
+
+[node name="Loot_Holder" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07866, 0.847026, 0 )
+
+[node name="Loot_Holder2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.85122, 0.847026, 0 )
+
+[node name="Loot_Holder3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.444294, 0.847026, 2.1913 )
+
+[node name="Loot_Holder4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.444294, 0.847026, -2.10434 )
+
+[node name="Loot_Holder5" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90551, 0.847026, 2.01109 )
+
+[node name="Loot_Holder6" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88468, 0.847026, 2.12446 )
+
+[node name="Loot_Holder7" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97486, 0.847026, -1.91546 )
+
+[node name="Loot_Holder8" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00011, 0.847026, -1.75816 )
+

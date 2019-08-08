@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Breakable.gd" type="Script" id=1]
+[ext_resource path="res://broken_breakable.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 0.5, 2, 0.5 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 1, 5, 3 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.515336, 3.1174, 1.47708 )
+
+[node name="Breakable_Tombstone2" type="Spatial"]
+
+[node name="Breakable" type="StaticBody" parent="."]
+script = ExtResource( 1 )
+destroyed_breakable = ExtResource( 2 )
+
+[node name="MeshInstance9" type="MeshInstance" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8292, -0.0523205 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance10" type="MeshInstance" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 0.000321664, 1, 0, -1, 0.000321664, 0, 3.8292, -0.0191355 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance8" type="MeshInstance" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.405116, -0.0492353 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Collision_Shape" type="CollisionShape" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66013, 0 )
+shape = SubResource( 3 )
+
+[node name="Broken_Breakable_Holder" type="Spatial" parent="."]
+
+[node name="Loot_Holder" type="Spatial" parent="."]
+
+[node name="Loot_Holder2" type="Spatial" parent="."]
+
+[node name="Loot_Holder3" type="Spatial" parent="."]
+
+[node name="Loot_Holder4" type="Spatial" parent="."]
+
+[node name="Loot_Holder5" type="Spatial" parent="."]
+
+[node name="Loot_Holder6" type="Spatial" parent="."]
+
+[node name="Loot_Holder7" type="Spatial" parent="."]
+
+[node name="Loot_Holder8" type="Spatial" parent="."]
+

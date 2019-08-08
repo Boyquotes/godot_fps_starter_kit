@@ -1,0 +1,123 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/loot/Loot_global.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 3, 3.13746, 2.4 )
+
+[sub_resource type="ParticlesMaterial" id=2]
+render_priority = 1
+spread = 3.0
+gravity = Vector3( 0, 20, 0 )
+angular_velocity = 2.8026e-044
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.305882, 0, 0.611765, 1 )
+
+[sub_resource type="SphereMesh" id=4]
+material = SubResource( 3 )
+height = 1.0
+radial_segments = 4
+rings = 2
+
+[sub_resource type="CubeMesh" id=5]
+size = Vector3( 2, 0.5, 0.5 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.305882, 0, 0.611765, 1 )
+
+[sub_resource type="CubeMesh" id=7]
+size = Vector3( 2, 0.5, 0.5 )
+
+[sub_resource type="Animation" id=8]
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Holder:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 180, 0 ), Vector3( 0, 360, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Holder:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 1, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 1, 0 ), Vector3( 0, 0, 0 ) ]
+}
+
+[node name="Upgrade_Purple" type="Spatial"]
+script = ExtResource( 1 )
+item_var = 31
+
+[node name="Holder" type="Spatial" parent="."]
+transform = Transform( -0.986687, 0, 0.162628, 0, 1, 0, -0.162628, 0, -0.986687, 0, 0.103994, 0 )
+
+[node name="Item_Pickup_Trigger" type="Area" parent="Holder"]
+
+[node name="Shape_Kit" type="CollisionShape" parent="Holder/Item_Pickup_Trigger"]
+transform = Transform( 1, 0, -1.49012e-008, 0, 1, 0, 1.49012e-008, 0, 1, 0, 1.77552, 0 )
+shape = SubResource( 1 )
+
+[node name="SpotLight" type="SpotLight" parent="Holder"]
+transform = Transform( 1, 1.49012e-008, 0, 0, 0.707107, 0.707106, 1.49012e-008, -0.707107, 0.707107, -0.2298, 13.0649, 11.31 )
+light_color = Color( 0.305882, 0, 0.611765, 1 )
+light_energy = 4.0
+light_specular = 1.0
+light_bake_mode = 2
+spot_range = 19.2263
+spot_angle = 14.9893
+
+[node name="SpotLight2" type="SpotLight" parent="Holder"]
+transform = Transform( 1, 1.49012e-008, 0, 0, -0.707107, 0.707106, 1.49012e-008, -0.707107, -0.707107, -0.27941, 13.0649, -12.8032 )
+light_color = Color( 0.305882, 0, 0.611765, 1 )
+light_energy = 4.0
+light_specular = 1.0
+light_bake_mode = 2
+spot_range = 19.2263
+spot_angle = 14.9893
+
+[node name="OmniLight" type="OmniLight" parent="Holder"]
+transform = Transform( 1, 0, -2.98023e-008, 0, 1, 0, 1.49012e-008, 0, 1, -0.33574, 0.590586, 0.0553374 )
+light_color = Color( 0.305882, 0, 0.611765, 1 )
+light_energy = 4.0
+light_specular = 1.0
+omni_range = 3.07019
+
+[node name="Particles" type="Particles" parent="Holder"]
+transform = Transform( -0.986687, 0, -0.162628, 0, 1, 0, 0.162628, 0, -0.986687, 0, 3.40552, 0 )
+visibility_aabb = AABB( -4, -9.10524, -4, 8, 18.2105, 8 )
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Holder"]
+transform = Transform( 0.992633, -0.112616, -0.0446983, 0.112616, 0.721443, 0.683255, -0.0446981, -0.683255, 0.72881, 0, 1.82885, 0 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Holder"]
+transform = Transform( 0.044698, -0.112616, 0.992633, -0.683255, 0.721443, 0.112616, -0.72881, -0.683255, -0.0446984, 0, 1.82885, 0 )
+mesh = SubResource( 7 )
+material/0 = SubResource( 6 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="Holder"]
+transform = Transform( -0.112616, -0.992633, -0.0446982, 0.721443, -0.112616, 0.683255, -0.683255, 0.0446982, 0.72881, 0, 1.82885, 0 )
+mesh = SubResource( 7 )
+material/0 = SubResource( 6 )
+
+[node name="Animation_Player" type="AnimationPlayer" parent="."]
+autoplay = "Health_Anim"
+anims/Health_Anim = SubResource( 8 )
+
+[connection signal="body_entered" from="Holder/Item_Pickup_Trigger" to="." method="_on_Item_Pickup_Trigger_body_entered"]

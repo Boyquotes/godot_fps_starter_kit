@@ -1,0 +1,498 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Main_Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/lightblue_equirectangular.png" type="Texture" id=2]
+[ext_resource path="res://assets/Titillium-Regular.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="PanoramaSky" id=1]
+radiance_size = 0
+panorama = ExtResource( 2 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+tonemap_mode = 3
+dof_blur_far_amount = 0.08
+glow_enabled = true
+glow_levels/1 = true
+glow_levels/2 = true
+glow_levels/5 = false
+glow_intensity = 1.0
+glow_strength = 1.1
+glow_blend_mode = 0
+glow_bicubic_upscale = true
+
+[sub_resource type="Animation" id=3]
+resource_name = "Background_Animation"
+length = 9.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Main_Menu_Camera:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 40, 40, 40 ), Vector3( 80, 80, 80 ), Vector3( 120, 120, 120 ), Vector3( 160, 160, 160 ), Vector3( 200, 200, 200 ), Vector3( 240, 240, 240 ), Vector3( 280, 280, 280 ), Vector3( 320, 320, 320 ), Vector3( 360, 360, 360 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.199219, 0.199219, 0.199219, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.0535583, 0.064363, 0.152344, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="Main_Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.22772
+margin_top = 1.0
+margin_right = 1.22778
+margin_bottom = 1.0
+script = ExtResource( 1 )
+testing_area_scene = "res://Testing_Area.tscn"
+space_level_scene = "res://assets/Space_Level_Objects/Space_Level.tscn"
+ruins_level_scene = "res://assets/Ruin_Level_Objects/Ruins_Level.tscn"
+church_level_scene = "res://Church_Level.tscn"
+
+[node name="Background_Animation" type="Spatial" parent="."]
+
+[node name="World_Environment" type="WorldEnvironment" parent="Background_Animation"]
+environment = SubResource( 2 )
+
+[node name="Main_Menu_Camera" type="Camera" parent="Background_Animation"]
+transform = Transform( 1, -1.74846e-007, 1.74846e-007, 1.74846e-007, 1, -1.74846e-007, -1.74846e-007, 1.74846e-007, 1, 0, 0, 0 )
+
+[node name="Animation_Player" type="AnimationPlayer" parent="Background_Animation"]
+autoplay = "Background_Animation"
+playback_speed = 0.18
+anims/Background_Animation = SubResource( 3 )
+
+[node name="Start_Menu" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0.901961 )
+margin_right = 330.0
+margin_bottom = 720.0
+custom_styles/panelf = SubResource( 4 )
+custom_styles/panel = SubResource( 4 )
+custom_styles/panelnc = SubResource( 4 )
+
+[node name="Title_Label" type="Label" parent="Start_Menu"]
+margin_left = 20.0
+margin_top = 11.0526
+margin_right = 227.0
+margin_bottom = 78.0526
+rect_scale = Vector2( 1.4, 1.4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "Godot FPS
+Starter Kit"
+align = 1
+valign = 1
+
+[node name="Button_Start" type="Button" parent="Start_Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -155.0
+margin_top = -350.238
+margin_right = 155.0
+margin_bottom = -300.238
+custom_fonts/font = SubResource( 5 )
+text = "Start game"
+
+[node name="Button_Options" type="Button" parent="Start_Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -156.432
+margin_top = -190.143
+margin_right = 153.568
+margin_bottom = -140.143
+custom_fonts/font = SubResource( 5 )
+text = "Options"
+
+[node name="Button_Credits" type="Button" parent="Start_Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -155.0
+margin_top = -130.0
+margin_right = 155.0
+margin_bottom = -79.9998
+custom_fonts/font = SubResource( 5 )
+text = "Credits"
+
+[node name="Button_Quit" type="Button" parent="Start_Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -155.0
+margin_top = -70.0
+margin_right = 155.0
+margin_bottom = -20.0
+custom_fonts/font = SubResource( 5 )
+text = "Quit"
+
+[node name="Label" type="Label" parent="Start_Menu"]
+margin_left = 171.211
+margin_top = 110.632
+margin_right = 304.211
+margin_bottom = 150.632
+text = "By : LaVoS eS DeuS
+aka - Slimebucket"
+
+[node name="Load_Select_Menu" type="Panel" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.901961 )
+margin_right = 330.0
+margin_bottom = 720.0
+custom_styles/panelf = SubResource( 4 )
+custom_styles/panel = SubResource( 4 )
+custom_styles/panelnc = SubResource( 4 )
+
+[node name="Button_Back" type="Button" parent="Load_Select_Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -155.0
+margin_top = -70.0
+margin_right = 155.0
+margin_bottom = -20.0
+custom_fonts/font = SubResource( 5 )
+text = "Back"
+
+[node name="Button_Newgame" type="Button" parent="Load_Select_Menu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -120.402
+margin_top = 56.708
+margin_right = 119.598
+margin_bottom = 116.708
+text = "New Game"
+
+[node name="Button_Space" type="Button" parent="Load_Select_Menu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -120.402
+margin_top = 488.613
+margin_right = 119.598
+margin_bottom = 548.613
+text = "Space level"
+
+[node name="Button_Ruins" type="Button" parent="Load_Select_Menu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -120.402
+margin_top = 559.139
+margin_right = 119.598
+margin_bottom = 619.139
+text = "Ruins level"
+
+[node name="Button_Test" type="Button" parent="Load_Select_Menu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -120.402
+margin_top = 417.014
+margin_right = 119.598
+margin_bottom = 477.014
+text = "Test Area"
+
+[node name="Button_Load_1" type="Button" parent="Load_Select_Menu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -120.402
+margin_top = 157.077
+margin_right = 119.598
+margin_bottom = 217.077
+text = "Load File 1"
+
+[node name="Button_Load_2" type="Button" parent="Load_Select_Menu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -120.402
+margin_top = 224.851
+margin_right = 119.598
+margin_bottom = 284.851
+text = "Load File 2"
+
+[node name="Button_Load_3" type="Button" parent="Load_Select_Menu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -121.454
+margin_top = 293.313
+margin_right = 118.546
+margin_bottom = 353.313
+text = "Load File 3"
+
+[node name="Credits" type="Panel" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.901961 )
+margin_right = 330.0
+margin_bottom = 720.0
+custom_styles/panelf = SubResource( 4 )
+custom_styles/panel = SubResource( 4 )
+custom_styles/panelnc = SubResource( 4 )
+
+[node name="Button_Back" type="Button" parent="Credits"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -155.0
+margin_top = -70.0
+margin_right = 155.0
+margin_bottom = -20.0
+custom_fonts/font = SubResource( 5 )
+text = "Back"
+
+[node name="Button_Open_Godot" type="Button" parent="Credits"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -152.136
+margin_top = -114.621
+margin_right = 157.864
+margin_bottom = -76.6207
+custom_fonts/font = SubResource( 5 )
+text = "Open Godot website"
+
+[node name="Button_Open_Miz" type="Button" parent="Credits"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -152.136
+margin_top = -450.19
+margin_right = 157.864
+margin_bottom = -412.19
+custom_fonts/font = SubResource( 5 )
+text = "Miziziziz"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/Button_Open_Miz"]
+margin_left = -5.99812
+margin_top = -13.1664
+margin_right = 271.002
+margin_bottom = 5.83365
+tab_size = 0
+text = "Learned sprite animation matrix from:"
+
+[node name="Button_Open_Toffe" type="Button" parent="Credits"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -152.136
+margin_top = -226.25
+margin_right = 157.864
+margin_bottom = -188.25
+custom_fonts/font = SubResource( 5 )
+text = "Toffe"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/Button_Open_Toffe"]
+margin_left = -5.99812
+margin_top = -13.1664
+margin_right = 271.002
+margin_bottom = 5.83365
+tab_size = 0
+text = "Learned Inventory coding:"
+
+[node name="Button_Open_fpstutorial" type="Button" parent="Credits"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -150.97
+margin_top = -293.614
+margin_right = 159.03
+margin_bottom = -255.614
+custom_fonts/font = SubResource( 5 )
+text = "Godot Docs"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/Button_Open_fpstutorial"]
+margin_left = 1.0
+margin_top = -31.8356
+margin_right = 301.0
+margin_bottom = 4.16443
+tab_size = 0
+text = " Creator of basic FPS Tutorial, the backbone and starting point of this project:"
+
+[node name="Button_Open_GDquest" type="Button" parent="Credits"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -152.136
+margin_top = -517.67
+margin_right = 157.864
+margin_bottom = -479.67
+custom_fonts/font = SubResource( 5 )
+text = "GDquest"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/Button_Open_GDquest"]
+margin_left = 2.2986
+margin_top = -13.381
+margin_right = 183.299
+margin_bottom = 5.61896
+tab_size = 0
+text = "Learned save system from:"
+
+[node name="Title_AJ" type="Label" parent="Credits"]
+margin_left = 13.2096
+margin_top = 30.8345
+margin_right = 234.21
+margin_bottom = 132.835
+rect_scale = Vector2( 1.4, 1.4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "La Vos eS DeuS
+aka SlimeBucket
+--A.J. Pyle--"
+align = 1
+valign = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/Title_AJ"]
+margin_left = -6.10301
+margin_top = -13.6936
+margin_right = 174.897
+margin_bottom = 5.3064
+tab_size = 0
+text = "Project Lead, Programmer"
+
+[node name="Options_Menu" type="Panel" parent="."]
+editor/display_folded = true
+visible = false
+modulate = Color( 1, 1, 1, 0.901961 )
+margin_right = 330.0
+margin_bottom = 720.0
+custom_styles/panelf = SubResource( 4 )
+custom_styles/panel = SubResource( 4 )
+custom_styles/panelnc = SubResource( 4 )
+
+[node name="Title_Label" type="Label" parent="Options_Menu"]
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 227.0
+margin_bottom = 53.0
+rect_scale = Vector2( 1.4, 1.4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "Options"
+align = 1
+valign = 1
+
+[node name="Label_Mouse_Sensitivity" type="Label" parent="Options_Menu"]
+margin_top = 120.0
+margin_right = 330.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 5 )
+text = "Mouse sensitivity"
+align = 1
+valign = 1
+
+[node name="HSlider_Mouse_Sensitivity" type="HSlider" parent="Options_Menu"]
+margin_left = 10.0
+margin_top = 160.0
+margin_right = 320.0
+margin_bottom = 176.0
+min_value = 0.001
+max_value = 0.4
+step = 0.004
+value = 0.012
+ticks_on_borders = true
+
+[node name="Label_Joypad_Sensitivity" type="Label" parent="Options_Menu"]
+margin_top = 190.0
+margin_right = 330.0
+margin_bottom = 222.0
+custom_fonts/font = SubResource( 5 )
+text = "Joypad sensitivity"
+align = 1
+valign = 1
+
+[node name="HSlider_Joypad_Sensitivity" type="HSlider" parent="Options_Menu"]
+margin_left = 10.0
+margin_top = 230.0
+margin_right = 320.0
+margin_bottom = 246.0
+min_value = 0.1
+max_value = 5.0
+step = 0.1
+value = 0.1
+ticks_on_borders = false
+
+[node name="Check_Button_VSync" type="CheckButton" parent="Options_Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -135.0
+margin_top = -450.0
+margin_right = 135.0
+margin_bottom = -410.0
+custom_fonts/font = SubResource( 5 )
+pressed = true
+text = "V-Sync"
+
+[node name="Button_Fullscreen" type="Button" parent="Options_Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -135.0
+margin_top = -400.0
+margin_right = 135.0
+margin_bottom = -350.0
+custom_fonts/font = SubResource( 5 )
+text = "Fullscreen"
+
+[node name="Check_Button_Debug" type="CheckButton" parent="Options_Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -155.0
+margin_top = -150.0
+margin_right = 155.0
+margin_bottom = -110.0
+custom_fonts/font = SubResource( 5 )
+text = "Debug display"
+
+[node name="Button_Back" type="Button" parent="Options_Menu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -155.0
+margin_top = -70.0
+margin_right = 155.0
+margin_bottom = -20.0
+custom_fonts/font = SubResource( 5 )
+text = "Back"
+

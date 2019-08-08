@@ -1,0 +1,44 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://SaveGame.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+game_version = "0.0.0.1"
+data = {
+"party_member_Player": {
+"GRAVITY": -24.8,
+"JUMP_SPEED": 18,
+"MAX_ARMOR": 1000,
+"MAX_GOLD": 5000,
+"MAX_HEALTH": 1500,
+"MAX_SPEED": 20,
+"MAX_SPRINT_SPEED": 30,
+"MOVE_SPEED": 4,
+"P_DAMAGE": 5,
+"SPRINT_ACCEL": 18,
+"armor": 500,
+"big_bone_amount": 0,
+"big_claw_amount": 0,
+"big_talon_amount": 0,
+"big_tooth_amount": 0,
+"damage": 5,
+"grenade_amounts": {
+"Grenade": 2,
+"Sticky Grenade": 2
+},
+"has_chaingun": false,
+"has_key1": false,
+"has_key2": false,
+"has_key3": false,
+"has_rifle": true,
+"has_shotgun": false,
+"health": 1000,
+"level": "Space_Level",
+"playergold": 20000
+}
+}
+inventory = {
+
+}
+

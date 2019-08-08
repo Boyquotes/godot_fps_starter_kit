@@ -1,0 +1,105 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/loot/gold5.gd" type="Script" id=1]
+[ext_resource path="res://assets/coin/coin.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://assets/gold bag/13450_Bag_of_Gold_v1_L3.obj" type="ArrayMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.831373, 0.686275, 0.215686, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.831373, 0.686275, 0.215686, 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 3, 2, 2.4 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 2, 2, 2 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Health_Anim"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Holder:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 180, 0 ), Vector3( 0, 360, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Holder:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 1, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 1, 0 ), Vector3( 0, 0, 0 ) ]
+}
+
+[node name="Gold5_Pickup" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Holder" type="Spatial" parent="."]
+transform = Transform( -0.747557, 0, -0.664197, 0, 1, 0, 0.664197, 0, -0.747557, 0, 0.462453, 0 )
+
+[node name="Gold5_Small" type="Spatial" parent="Holder"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.449994, 0 )
+
+[node name="coin" type="MeshInstance" parent="Holder/Gold5_Small"]
+transform = Transform( 0.7, 0, 0, 0, 0.573406, 0.401504, 0, -0.401504, 0.573406, 0.5, 0.550006, 1.19209e-007 )
+mesh = ExtResource( 2 )
+material/0 = SubResource( 1 )
+material/1 = SubResource( 2 )
+
+[node name="coin2" type="MeshInstance" parent="Holder/Gold5_Small"]
+transform = Transform( 0.7, 0, 0, 0, 0.689365, 0.121554, 0, -0.121554, 0.689365, -0.5, 0.550006, 0.5 )
+mesh = ExtResource( 2 )
+material/0 = SubResource( 1 )
+material/1 = SubResource( 2 )
+
+[node name="coin3" type="MeshInstance" parent="Holder/Gold5_Small"]
+transform = Transform( 0.676148, 0.178421, 0.0314606, -0.175, 0.611726, 0.291833, 0.0468911, -0.289754, 0.635487, 1, 0.550006, 0.5 )
+mesh = ExtResource( 2 )
+material/0 = SubResource( 1 )
+material/1 = SubResource( 2 )
+
+[node name="coin4" type="MeshInstance" parent="Holder/Gold5_Small"]
+transform = Transform( 0.644966, 0.233251, -0.140045, -0.178421, 0.634652, 0.235336, 0.205388, -0.181138, 0.644208, 0.5, 0.550006, 1 )
+mesh = ExtResource( 2 )
+material/0 = SubResource( 1 )
+material/1 = SubResource( 2 )
+
+[node name="Gold5_large" type="Spatial" parent="Holder"]
+visible = false
+
+[node name="goldbag" type="MeshInstance" parent="Holder/Gold5_large"]
+transform = Transform( 0.3, 0, 0, 0, -0.0776457, 0.289778, 0, -0.289778, -0.0776457, 0.5, -1, 0.5 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="Gold_Pickup_Trigger" type="Area" parent="Holder"]
+editor/display_folded = true
+
+[node name="Shape_Kit" type="CollisionShape" parent="Holder/Gold_Pickup_Trigger"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.570922, 0 )
+shape = SubResource( 3 )
+
+[node name="Shape_Kit_Small" type="CollisionShape" parent="Holder/Gold_Pickup_Trigger"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.744072, 0 )
+shape = SubResource( 4 )
+disabled = true
+
+[node name="Animation_Player" type="AnimationPlayer" parent="."]
+autoplay = "Health_Anim"
+anims/Health_Anim = SubResource( 5 )
+

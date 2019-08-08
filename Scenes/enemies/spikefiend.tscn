@@ -1,0 +1,253 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scripts/enemies/spikefiend.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/enemies/sfshoot.anim" type="Animation" id=2]
+[ext_resource path="res://Scenes/enemies/sfwalk.anim" type="Animation" id=3]
+[ext_resource path="res://assets/sprites/spikefiendsprite.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/enemies/sfsprite.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "death"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sfsprite:anim_col")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 589 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "die"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("sfsprite:anim_col")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 576, 577, 578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "gethit"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("sfsprite:anim_col")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 288, 289, 290, 291, 292, 293, 294, 295 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sfsprite:anim_col")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="SpatialMaterial" id=5]
+flags_transparent = true
+flags_unshaded = true
+params_billboard_mode = 2
+
+[sub_resource type="CylinderMesh" id=6]
+top_radius = 0.4
+bottom_radius = 1.4
+radial_segments = 6
+rings = 2
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 1, 0, 0, 1 )
+roughness = 0.0
+emission_enabled = true
+emission = Color( 1, 0.723816, 0.292969, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="CylinderShape" id=8]
+radius = 4.66679
+height = 10.0
+
+[sub_resource type="CylinderShape" id=9]
+radius = 63.4719
+height = 10.0
+
+[sub_resource type="CylinderShape" id=10]
+radius = 33.3229
+height = 10.0
+
+[sub_resource type="ParticlesMaterial" id=11]
+emission_shape = 1
+emission_sphere_radius = 2.0
+gravity = Vector3( 0, 9.8, 0 )
+initial_velocity = 1.0
+angular_velocity = 7.84727e-044
+radial_accel = 2.0
+radial_accel_random = 1.0
+scale = 6.0
+scale_random = 0.2
+
+[sub_resource type="SpatialMaterial" id=12]
+flags_transparent = true
+params_depth_draw_mode = 3
+albedo_color = Color( 0.427451, 0, 0, 0.705882 )
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id=13]
+material = SubResource( 12 )
+radius = 0.1
+height = 0.5
+radial_segments = 6
+rings = 3
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 2.49592, 5.14271, 0.830188 )
+
+[node name="spikefiend" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0200725, -0.0188289, -0.000212431 )
+collision_layer = 6
+script = ExtResource( 1 )
+ammo_in_turret = 20
+AMMO_IN_FULL_TURRET = 20
+AMMO_RELOAD_TIME = 4
+FLASH_TIME = 0.1
+FIRE_TIME = 0.8
+PLAYER_HEIGHT = 4
+MOVE_SPEED = 4
+BLEED_TIME = 10
+damage = 5
+P_DAMAGE = 5
+enemy_health = 200
+MAX_ENEMY_HEALTH = 200
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/death = SubResource( 1 )
+anims/die = SubResource( 2 )
+anims/gethit = SubResource( 3 )
+anims/idle = SubResource( 4 )
+anims/shoot = ExtResource( 2 )
+anims/walk = ExtResource( 3 )
+
+[node name="sfsprite" type="Sprite3D" parent="." groups=[
+"critter",
+]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
+material_override = SubResource( 5 )
+pixel_size = 0.1
+texture = ExtResource( 4 )
+vframes = 40
+hframes = 18
+frame = 605
+script = ExtResource( 5 )
+anim_col = 589
+
+[node name="Flash_2" type="MeshInstance" parent="."]
+transform = Transform( 0.6, 0, 0, 0, -2.62268e-008, -0.6, 0, 0.6, -2.62268e-008, 0, 4.40941, 0.16621 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="Flash" type="MeshInstance" parent="."]
+transform = Transform( 0.6, 0, 0, 0, -2.62268e-008, -0.6, 0, 0.6, -2.62268e-008, 0, 5.44807, -0.21019 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 7 )
+
+[node name="Ray_Cast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.10698, -3.18493 )
+cast_to = Vector3( 0, 0, -40 )
+
+[node name="hitbox" type="Area" parent="."]
+editor/display_folded = true
+collision_layer = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="hitbox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0 )
+shape = SubResource( 8 )
+
+[node name="Chase_Area" type="Area" parent="."]
+editor/display_folded = true
+collision_layer = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="Chase_Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0 )
+shape = SubResource( 9 )
+
+[node name="Vision_Area" type="Area" parent="."]
+editor/display_folded = true
+collision_layer = 2
+
+[node name="Collision_Shape" type="CollisionShape" parent="Vision_Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0 )
+shape = SubResource( 10 )
+
+[node name="Head" type="Spatial" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.75254, 0.549067 )
+
+[node name="Barrel_End" type="Spatial" parent="Head"]
+transform = Transform( -1, 0, -1.50996e-007, 0, 1, 0, 1.50996e-007, 0, -1, 0, 2.22162, -4.72588 )
+
+[node name="Smoke" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85465, 0.50817 )
+emitting = false
+amount = 64
+lifetime = 1.4
+visibility_aabb = AABB( -3.64419, -2.44026, -2.50963, 7.57765, 16.6094, 7.38895 )
+process_material = SubResource( 11 )
+draw_pass_1 = SubResource( 13 )
+
+[node name="clshape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0 )
+shape = SubResource( 14 )
+
+[node name="Loot_Holder" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.69376, 1.87027, 2.44965 )
+
+[node name="Loot_Holder2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.32668, 1.87027, -2.65569 )
+
+[node name="Loot_Holder3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2436, 1.87027, -2.49735 )
+
+[node name="Loot_Holder4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.31369, 1.87027, 2.07724 )
+
+[node name="Loot_Holder5" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.87027, -1.84074 )
+
+[node name="Loot_Holder6" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.63553, 1.87027, 0 )
+
+[node name="Loot_Holder7" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.21705, 1.87027, 0 )
+
+[node name="Loot_Holder8" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0847375, 1.87027, 2.21174 )
+

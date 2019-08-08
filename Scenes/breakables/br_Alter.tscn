@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Breakable.gd" type="Script" id=1]
+[ext_resource path="res://broken_breakable.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 2.4968, 3.51839, 1.53526 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 5, 6, 3 )
+
+[sub_resource type="PrismMesh" id=3]
+left_to_right = 0.2
+size = Vector3( 3, 1, 5 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 5, 0.25, 0.25 )
+
+[node name="Breakable_Alter" type="Spatial"]
+
+[node name="Breakable" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 3.5, -0.5 )
+script = ExtResource( 1 )
+destroyed_breakable = ExtResource( 2 )
+
+[node name="Collision_Shape" type="CollisionShape" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 5.96046e-008, 0.5 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Breakable"]
+transform = Transform( -0.999981, 0, 0.00614521, -0.00614521, -4.37114e-008, -0.999981, 2.68616e-010, -1, 4.37106e-008, -0.0476922, 0.0353499, 1.01827 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance5" type="MeshInstance" parent="Breakable"]
+transform = Transform( -0.00614517, 0, -0.999981, 0.999981, -4.37114e-008, -0.00614517, -4.37106e-008, -1, 2.68614e-010, -0.047644, 0.0275096, -2.4813 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance6" type="MeshInstance" parent="Breakable"]
+transform = Transform( -0.999981, -0.00237979, 0.0056657, -0.00614521, 0.387252, -0.921953, 2.68616e-010, -0.921971, -0.38726, -0.0565151, 1.4711, -2.12335 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="Broken_Breakable_Holder" type="Spatial" parent="."]
+
+[node name="Loot_Holder" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0032, 0, 1.95743 )
+
+[node name="Loot_Holder5" type="Spatial" parent="."]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -2.87373, 0, -0.0773129 )
+
+[node name="Loot_Holder2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0032, 0, -2.18238 )
+
+[node name="Loot_Holder6" type="Spatial" parent="."]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0.0535586, 0, -3.0046 )
+
+[node name="Loot_Holder3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.03858, 0, -2.18238 )
+
+[node name="Loot_Holder7" type="Spatial" parent="."]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 2.91153, 0, -0.146626 )
+
+[node name="Loot_Holder4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.03858, 0, 1.96086 )
+
+[node name="Loot_Holder8" type="Spatial" parent="."]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -0.0181805, 0, 2.78309 )
+

@@ -1,0 +1,1152 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Script_PlayerInventory.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[node name="Control" type="WindowDialog"]
+pause_mode = 2
+visible = true
+margin_left = 16.4026
+margin_top = 39.0
+margin_right = 1230.4
+margin_bottom = 714.0
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+pause_mode = 2
+margin_left = 3.43198
+margin_top = 1.0
+margin_right = 817.432
+margin_bottom = 459.0
+
+[node name="store_item1" type="Button" parent="Panel"]
+margin_left = 1.46811
+margin_top = 491.996
+margin_right = 271.468
+margin_bottom = 517.996
+text = "Health Potion (HP +50)"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item1"]
+margin_left = 167.37
+margin_top = 3.34129
+margin_right = 267.37
+margin_bottom = 23.3413
+text = " Gold - 95"
+
+[node name="store_item2" type="Button" parent="Panel"]
+margin_left = 902.96
+margin_top = 496.761
+margin_right = 1172.96
+margin_bottom = 522.761
+text = "Angle Grinder (AP +100)"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item2"]
+margin_left = 165.63
+margin_top = 6.3105
+margin_right = 265.63
+margin_bottom = 26.3105
+text = " Gold - 206"
+
+[node name="store_item3" type="Button" parent="Panel"]
+margin_left = 902.96
+margin_top = 468.534
+margin_right = 1172.96
+margin_bottom = 494.534
+text = "Pliers (AP +50)"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item3"]
+margin_left = 166.596
+margin_top = 4.8788
+margin_right = 266.596
+margin_bottom = 24.8788
+text = " Gold - 104"
+
+[node name="store_item4" type="Button" parent="Panel"]
+margin_left = 902.96
+margin_top = 441.431
+margin_right = 1172.96
+margin_bottom = 467.431
+text = "Wrench (AP +5)"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item4"]
+margin_left = 167.41
+margin_top = 5.08994
+margin_right = 267.41
+margin_bottom = 25.0899
+text = " Gold - 15"
+
+[node name="store_item5" type="Button" parent="Panel"]
+margin_left = 902.96
+margin_top = 525.795
+margin_right = 1172.96
+margin_bottom = 551.795
+text = "Screw Driver (AP +200)"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item5"]
+margin_left = 166.596
+margin_top = 4.0
+margin_right = 266.596
+margin_bottom = 24.0
+text = " Gold - 411"
+
+[node name="store_item6" type="Button" parent="Panel"]
+margin_left = 824.678
+margin_top = 58.9152
+margin_right = 1124.68
+margin_bottom = 85.9152
+text = "Pisol - Ammo + 5"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item6"]
+margin_left = 9.24933
+margin_top = 22.9811
+margin_right = 301.249
+margin_bottom = 42.9811
+text = " Big Tooth"
+
+[node name="TextEdit2" type="TextEdit" parent="Panel/store_item6"]
+margin_left = 197.848
+margin_top = 1.1524
+margin_right = 297.848
+margin_bottom = 21.1524
+text = " Gold - 1007"
+
+[node name="store_item7" type="Button" parent="Panel"]
+margin_left = 826.038
+margin_top = 104.664
+margin_right = 1126.04
+margin_bottom = 131.664
+text = "Pisol - Ammo + 15"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item7"]
+margin_left = 8.57867
+margin_top = 22.8434
+margin_right = 300.579
+margin_bottom = 42.8434
+text = " B.Talon - 1 B.Bone - 1 B.Tooth -1 B.Claw - 2"
+
+[node name="TextEdit2" type="TextEdit" parent="Panel/store_item7"]
+margin_left = 197.178
+margin_top = 1.01471
+margin_right = 297.178
+margin_bottom = 21.0147
+text = " Gold - 3027"
+
+[node name="store_item8" type="Button" parent="Panel"]
+margin_left = 276.39
+margin_top = 511.304
+margin_right = 576.39
+margin_bottom = 538.304
+text = "Max Health +10"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item8"]
+margin_left = 199.095
+margin_top = 2.2262
+margin_right = 299.095
+margin_bottom = 21.2262
+text = " Gold - 10030"
+
+[node name="TextEdit3" type="TextEdit" parent="Panel/store_item8"]
+margin_left = 9.02988
+margin_top = 24.1419
+margin_right = 301.03
+margin_bottom = 44.1419
+text = " Big Talon - 3 Big Tooth -1"
+
+[node name="store_item9" type="Button" parent="Panel"]
+margin_left = 275.523
+margin_top = 463.408
+margin_right = 575.523
+margin_bottom = 490.408
+text = "Max Health +1"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item9"]
+margin_left = 198.548
+margin_top = 1.09515
+margin_right = 298.548
+margin_bottom = 19.0952
+text = " Gold - 1040"
+
+[node name="TextEdit4" type="TextEdit" parent="Panel/store_item9"]
+margin_left = 8.34964
+margin_top = 20.968
+margin_right = 300.35
+margin_bottom = 40.968
+text = " Big Talon - 1"
+
+[node name="store_item10" type="Button" parent="Panel"]
+margin_left = 1.46811
+margin_top = 520.802
+margin_right = 271.468
+margin_bottom = 546.802
+text = "First Aid Kit (HP +100)"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item10"]
+margin_left = 167.37
+margin_top = 4.76309
+margin_right = 267.37
+margin_bottom = 24.7631
+text = " Gold - 198"
+
+[node name="store_item11_hp5" type="Button" parent="Panel"]
+margin_left = 1.46811
+margin_top = 463.155
+margin_right = 271.468
+margin_bottom = 489.155
+text = "Bandage (HP +5)"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item11_hp5"]
+margin_left = 167.37
+margin_top = 4.3988
+margin_right = 267.37
+margin_bottom = 24.3988
+text = " Gold - 12"
+
+[node name="store_item39_nadepack" type="Button" parent="Panel"]
+margin_left = 838.406
+margin_top = 343.374
+margin_right = 975.406
+margin_bottom = 429.374
+text = "Pack of Grenades"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item39_nadepack"]
+margin_left = 17.8959
+margin_top = 54.9252
+margin_right = 117.896
+margin_bottom = 74.9252
+text = " Gold - 3030"
+
+[node name="store_item_40_stickypack" type="Button" parent="Panel"]
+margin_left = 998.93
+margin_top = 341.524
+margin_right = 1135.93
+margin_bottom = 427.524
+text = "Pack of stickies"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item_40_stickypack"]
+margin_left = 18.9485
+margin_top = 54.9252
+margin_right = 118.949
+margin_bottom = 74.9252
+text = " Gold - 3030"
+
+[node name="store_item12" type="Button" parent="Panel"]
+visible = false
+margin_left = 693.723
+margin_top = 558.746
+margin_right = 893.723
+margin_bottom = 588.746
+text = "Chaingun - Max Ammo + 50"
+
+[node name="store_item13" type="Button" parent="Panel"]
+visible = false
+margin_left = 696.527
+margin_top = 596.778
+margin_right = 896.527
+margin_bottom = 626.778
+text = "Chaingun - Max Ammo + 150"
+
+[node name="store_item14" type="Button" parent="Panel"]
+margin_left = 829.532
+margin_top = 244.386
+margin_right = 1129.53
+margin_bottom = 271.386
+text = "Rifle - Ammo + 20"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item14"]
+margin_left = 8.66314
+margin_top = 25.309
+margin_right = 300.663
+margin_bottom = 43.309
+text = " Big Claw - 1"
+
+[node name="TextEdit2" type="TextEdit" parent="Panel/store_item14"]
+margin_left = 197.0
+margin_top = 2.0
+margin_right = 297.0
+margin_bottom = 21.0
+text = " Gold - 2000"
+
+[node name="store_item15" type="Button" parent="Panel"]
+margin_left = 829.762
+margin_top = 290.136
+margin_right = 1129.76
+margin_bottom = 317.136
+text = "Rifle - Ammo + 50"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item15"]
+margin_left = 11.2369
+margin_top = 26.3943
+margin_right = 303.237
+margin_bottom = 46.3943
+text = " B.Talon - 1 B.Bone - 1 B.Tooth -1 B.Claw - 2"
+
+[node name="TextEdit2" type="TextEdit" parent="Panel/store_item15"]
+margin_left = 197.936
+margin_top = -0.184387
+margin_right = 297.936
+margin_bottom = 19.8156
+text = " Gold - 3000"
+
+[node name="store_item16" type="Button" parent="Panel"]
+visible = false
+margin_left = 960.616
+margin_top = 7.01763
+margin_right = 1260.62
+margin_bottom = 34.0176
+text = "Pistol - Clip Size + 2"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item16"]
+margin_left = 9.95007
+margin_top = 26.3645
+margin_right = 301.95
+margin_bottom = 47.3645
+text = " B.Talon - 1 B.Bone - 1 B.Tooth -1 B.Claw - 2"
+
+[node name="TextEdit2" type="TextEdit" parent="Panel/store_item16"]
+margin_left = 197.743
+margin_top = 2.43445
+margin_right = 297.743
+margin_bottom = 22.4345
+text = " Gold - 2000"
+
+[node name="store_item17" type="Button" parent="Panel"]
+margin_left = 824.585
+margin_top = 11.2648
+margin_right = 1124.58
+margin_bottom = 38.2648
+text = "Pistol - Clip Size + 5"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item17"]
+margin_left = 8.0
+margin_top = 23.55
+margin_right = 300.0
+margin_bottom = 44.55
+text = " B.Talon - 1 B.Bone - 2 B.Tooth -1 B.Claw - 1"
+
+[node name="TextEdit2" type="TextEdit" parent="Panel/store_item17"]
+margin_left = 196.456
+margin_top = 1.72132
+margin_right = 296.456
+margin_bottom = 21.7213
+text = " Gold - 3000"
+
+[node name="store_item18" type="Button" parent="Panel"]
+visible = false
+margin_left = 477.363
+margin_top = 559.296
+margin_right = 677.363
+margin_bottom = 589.296
+text = "Shotgun -Max Ammo + 4"
+
+[node name="store_item19" type="Button" parent="Panel"]
+visible = false
+margin_left = 477.363
+margin_top = 595.134
+margin_right = 677.363
+margin_bottom = 625.134
+text = "Shotgun -Max Ammo + 10"
+
+[node name="store_item20" type="Button" parent="Panel"]
+margin_left = 578.659
+margin_top = 465.366
+margin_right = 878.659
+margin_bottom = 495.366
+text = "Max Speed +1"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item20"]
+margin_left = 198.654
+margin_top = 1.6608
+margin_right = 298.654
+margin_bottom = 21.6608
+text = " Gold - 15024"
+
+[node name="TextEdit4" type="TextEdit" parent="Panel/store_item20"]
+margin_left = 8.86176
+margin_top = 24.4797
+margin_right = 300.862
+margin_bottom = 44.4797
+text = " B.Talon - 4 B.Bone - 4 B.Tooth -4 B.Claw - 4"
+
+[node name="store_item21" type="Button" parent="Panel"]
+margin_left = 1.46811
+margin_top = 549.411
+margin_right = 271.468
+margin_bottom = 575.411
+text = "Lg HP Potion (HP +200)"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item21"]
+margin_left = 167.37
+margin_top = 3.36967
+margin_right = 267.37
+margin_bottom = 23.3697
+text = " Gold - 401"
+
+[node name="store_item22" type="Button" parent="Panel"]
+visible = false
+margin_left = 477.363
+margin_top = 474.0
+margin_right = 677.363
+margin_bottom = 504.0
+text = "Shotgun -Clip Size + 1"
+
+[node name="store_item23" type="Button" parent="Panel"]
+visible = false
+margin_left = 476.071
+margin_top = 509.839
+margin_right = 676.071
+margin_bottom = 539.839
+text = "Shotgun -Clip Size + 3"
+
+[node name="store_item24" type="Button" parent="Panel"]
+margin_left = 827.728
+margin_top = 150.986
+margin_right = 1127.73
+margin_bottom = 177.986
+text = "Rifle - Clip Size + 10"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item24"]
+margin_left = 9.66479
+margin_top = 20.409
+margin_right = 301.665
+margin_bottom = 40.409
+text = " B.Talon - 1 B.Bone - 1 B.Tooth -1 B.Claw - 2"
+
+[node name="TextEdit2" type="TextEdit" parent="Panel/store_item24"]
+margin_left = 197.314
+margin_top = 1.43033
+margin_right = 297.314
+margin_bottom = 21.4303
+text = " Gold - 2000"
+
+[node name="store_item25" type="Button" parent="Panel"]
+margin_left = 828.812
+margin_top = 194.836
+margin_right = 1128.81
+margin_bottom = 221.836
+text = "Rifle - Clip Size + 20"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item25"]
+margin_left = 7.5705
+margin_top = 24.836
+margin_right = 300.57
+margin_bottom = 44.836
+text = " B.Talon - 1 B.Bone - 1 B.Tooth -1 B.Claw - 2"
+
+[node name="TextEdit2" type="TextEdit" parent="Panel/store_item25"]
+margin_left = 196.169
+margin_top = 2.05734
+margin_right = 296.169
+margin_bottom = 22.0574
+text = " Gold - 3000"
+
+[node name="store_item26" type="Button" parent="Panel"]
+visible = false
+margin_left = 693.723
+margin_top = 472.342
+margin_right = 893.723
+margin_bottom = 502.342
+text = "Chaingun - Clip Size + 20"
+
+[node name="store_item27" type="Button" parent="Panel"]
+visible = false
+margin_left = 696.527
+margin_top = 510.375
+margin_right = 896.527
+margin_bottom = 540.375
+text = "Chaingun - Clip Size + 40"
+
+[node name="store_item28" type="Button" parent="Panel"]
+visible = false
+margin_left = 917.546
+margin_top = 560.962
+margin_right = 1117.55
+margin_bottom = 590.962
+text = "Grenade - Max Ammo +1"
+
+[node name="store_item29" type="Button" parent="Panel"]
+visible = false
+margin_left = 923.674
+margin_top = 601.21
+margin_right = 1123.67
+margin_bottom = 631.21
+text = "Sticky Nade - Max Ammo +1"
+
+[node name="store_item30" type="Button" parent="Panel"]
+margin_left = 579.259
+margin_top = 512.583
+margin_right = 879.259
+margin_bottom = 542.583
+text = "Max Jump Speed +1"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item30"]
+margin_left = 200.167
+margin_top = 1.28839
+margin_right = 300.167
+margin_bottom = 21.2884
+text = " Gold - 15024"
+
+[node name="TextEdit6" type="TextEdit" parent="Panel/store_item30"]
+margin_left = 9.21167
+margin_top = 22.8632
+margin_right = 301.212
+margin_bottom = 42.8632
+text = " B.Talon - 4 B.Bone - 4 B.Tooth -4 B.Claw - 4"
+
+[node name="store_item31" type="Button" parent="Panel"]
+margin_left = 581.069
+margin_top = 559.072
+margin_right = 881.069
+margin_bottom = 589.072
+text = "Physical Damage +1"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item31"]
+margin_left = 201.032
+margin_top = 0.88858
+margin_right = 301.032
+margin_bottom = 20.8886
+text = " Gold - 9024"
+
+[node name="TextEdit5" type="TextEdit" parent="Panel/store_item31"]
+margin_left = 8.35175
+margin_top = 21.9736
+margin_right = 300.352
+margin_bottom = 41.9736
+text = " B.Talon - 4 B.Bone - 4 B.Tooth -4 B.Claw - 4"
+
+[node name="store_item32" type="Button" parent="Panel"]
+visible = false
+margin_left = 1030.87
+margin_top = 244.292
+margin_right = 1230.87
+margin_bottom = 274.292
+text = "Physical Damage + 3"
+
+[node name="store_item33" type="Button" parent="Panel"]
+margin_left = 581.733
+margin_top = 606.385
+margin_right = 881.733
+margin_bottom = 636.385
+text = "Explosive Damage +1"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item33"]
+margin_left = 201.027
+margin_top = 0.987854
+margin_right = 301.027
+margin_bottom = 20.9879
+text = " Gold - 9024"
+
+[node name="TextEdit7" type="TextEdit" parent="Panel/store_item33"]
+margin_left = 9.58795
+margin_top = 25.9612
+margin_right = 301.588
+margin_bottom = 45.9612
+text = " B.Talon - 4 B.Bone - 4 B.Tooth -4 B.Claw - 1"
+
+[node name="store_item37" type="Button" parent="Panel"]
+margin_left = 899.754
+margin_top = 618.513
+margin_right = 1199.75
+margin_bottom = 648.513
+text = "Max Sticky Grenades +1"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item37"]
+margin_left = 201.027
+margin_top = 0.987854
+margin_right = 301.027
+margin_bottom = 20.9879
+text = " Gold - 6000"
+
+[node name="TextEdit7" type="TextEdit" parent="Panel/store_item37"]
+margin_left = 9.58795
+margin_top = 25.9612
+margin_right = 301.588
+margin_bottom = 45.9612
+text = " B.Talon - 4 B.Bone - 4 B.Tooth -4 B.Claw - 1"
+
+[node name="store_item34" type="Button" parent="Panel"]
+visible = false
+margin_left = 1034.14
+margin_top = 317.213
+margin_right = 1234.14
+margin_bottom = 347.213
+text = "Explosive Damage + 3"
+
+[node name="store_item35" type="Button" parent="Panel"]
+margin_left = 276.194
+margin_top = 558.722
+margin_right = 576.194
+margin_bottom = 585.722
+text = "Max Armor +1"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/store_item35"]
+margin_left = 197.586
+margin_top = 1.0929
+margin_right = 297.586
+margin_bottom = 21.0928
+text = " Gold - 1040"
+
+[node name="TextEdit9" type="TextEdit" parent="Panel/store_item35"]
+margin_left = 10.1284
+margin_top = 22.751
+margin_right = 302.129
+margin_bottom = 42.751
+text = "Big Bone - 1"
+
+[node name="store_item36" type="Button" parent="Panel"]
+margin_left = 277.456
+margin_top = 605.165
+margin_right = 577.456
+margin_bottom = 632.165
+text = "Max Armor +10"
+align = 0
+
+[node name="TextEdit3" type="TextEdit" parent="Panel/store_item36"]
+margin_left = 199.025
+margin_top = 1.68949
+margin_right = 299.025
+margin_bottom = 21.6895
+text = " Gold - 10030"
+
+[node name="TextEdit8" type="TextEdit" parent="Panel/store_item36"]
+margin_left = 7.96384
+margin_top = 23.238
+margin_right = 299.964
+margin_bottom = 43.238
+text = "Big Bone - 3 Big Tooth - 1"
+
+[node name="store_item38" type="Button" parent="Panel"]
+margin_left = 900.509
+margin_top = 571.041
+margin_right = 1200.51
+margin_bottom = 598.041
+text = "Max Grenades +1"
+align = 0
+
+[node name="TextEdit3" type="TextEdit" parent="Panel/store_item38"]
+margin_left = 200.078
+margin_top = 1.68949
+margin_right = 300.078
+margin_bottom = 21.6895
+text = " Gold - 6000"
+
+[node name="TextEdit8" type="TextEdit" parent="Panel/store_item38"]
+margin_left = 7.96384
+margin_top = 23.238
+margin_right = 299.964
+margin_bottom = 43.238
+text = "Big Bone - 3 Big Tooth - 1"
+
+[node name="portal" type="Button" parent="Panel"]
+visible = false
+margin_left = 296.394
+margin_top = 669.691
+margin_right = 546.394
+margin_bottom = 699.691
+text = "Town Portal"
+align = 0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/portal"]
+margin_left = 141.795
+margin_top = 5.42996
+margin_right = 241.795
+margin_bottom = 25.43
+text = " Gold - "
+
+[node name="key1" type="Button" parent="Panel"]
+visible = false
+margin_left = 1126.32
+margin_top = 516.655
+margin_right = 1227.32
+margin_bottom = 546.655
+text = "Key 1 - Green"
+
+[node name="key3" type="Button" parent="Panel"]
+visible = false
+margin_left = 1129.61
+margin_top = 590.452
+margin_right = 1230.61
+margin_bottom = 620.452
+text = "Key 3 - Red"
+
+[node name="Sprite_DraggedItem" type="Sprite" parent="Panel"]
+pause_mode = 2
+z_index = 1
+z_as_relative = false
+
+[node name="ItemList" type="ItemList" parent="Panel"]
+pause_mode = 2
+margin_left = 205.599
+margin_top = 30.0
+margin_right = 805.599
+margin_bottom = 420.0
+custom_styles/selected_focus = SubResource( 1 )
+custom_styles/bg_focus = SubResource( 2 )
+custom_styles/cursor_unfocused = SubResource( 3 )
+custom_styles/selected = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+custom_colors/guide_color = Color( 0, 0, 0, 0 )
+custom_constants/vseparation = 10
+custom_constants/hseparation = 15
+auto_height = true
+max_columns = 0
+same_column_width = true
+icon_mode = 0
+fixed_icon_size = Vector2( 48, 48 )
+
+[node name="WindowDialog_AddItemWindow" type="WindowDialog" parent="Panel"]
+pause_mode = 2
+editor/display_folded = true
+visible = true
+margin_left = 240.0
+margin_top = 160.0
+margin_right = 610.0
+margin_bottom = 300.0
+window_title = "Add Item"
+
+[node name="AddItemWindow_Label_ItemID" type="Label" parent="Panel/WindowDialog_AddItemWindow"]
+margin_left = 125.0
+margin_top = 40.0
+margin_right = 179.0
+margin_bottom = 54.0
+size_flags_vertical = 0
+text = "Item ID:"
+align = 2
+valign = 1
+
+[node name="AddItemWindow_SpinBox_ItemID" type="SpinBox" parent="Panel/WindowDialog_AddItemWindow"]
+margin_left = 185.0
+margin_top = 34.0
+margin_right = 259.0
+margin_bottom = 58.0
+min_value = 1.0
+value = 1.0
+
+[node name="AddItemWindow_Button_AddItem" type="Button" parent="Panel/WindowDialog_AddItemWindow"]
+margin_left = 80.0
+margin_top = 90.0
+margin_right = 180.0
+margin_bottom = 120.0
+text = "Add"
+
+[node name="AddItemWindow_Button_Close" type="Button" parent="Panel/WindowDialog_AddItemWindow"]
+margin_left = 200.0
+margin_top = 90.0
+margin_right = 300.0
+margin_bottom = 120.0
+text = "Close"
+
+[node name="WindowDialog_SplitItemWindow" type="WindowDialog" parent="Panel"]
+pause_mode = 2
+editor/display_folded = true
+margin_left = 240.0
+margin_top = 160.0
+margin_right = 610.0
+margin_bottom = 300.0
+window_title = "Split Item"
+
+[node name="SplitItemWindow_Button_Split" type="Button" parent="Panel/WindowDialog_SplitItemWindow"]
+margin_left = 80.0
+margin_top = 90.0
+margin_right = 180.0
+margin_bottom = 120.0
+text = "Split"
+
+[node name="SplitItemWindow_Button_Cancel" type="Button" parent="Panel/WindowDialog_SplitItemWindow"]
+margin_left = 200.0
+margin_top = 90.0
+margin_right = 300.0
+margin_bottom = 120.0
+text = "Cancel"
+
+[node name="SplitItemWindow_HSlider_Amount" type="HSlider" parent="Panel/WindowDialog_SplitItemWindow"]
+margin_left = 80.0
+margin_top = 30.0
+margin_right = 300.0
+margin_bottom = 46.0
+min_value = 1.0
+value = 1.0
+tick_count = 1
+ticks_on_borders = true
+
+[node name="SplitItemWindow_Label_Amount" type="Label" parent="Panel/WindowDialog_SplitItemWindow"]
+margin_left = 80.0
+margin_top = 60.0
+margin_right = 300.0
+margin_bottom = 74.0
+text = "1"
+align = 1
+
+[node name="WindowDialog_ItemMenu" type="WindowDialog" parent="Panel"]
+pause_mode = 2
+editor/display_folded = true
+visible = true
+margin_left = 300.0
+margin_top = 130.0
+margin_right = 590.0
+margin_bottom = 370.0
+
+[node name="ItemMenu_TextureFrame_Icon" type="TextureRect" parent="Panel/WindowDialog_ItemMenu"]
+margin_left = 120.0
+margin_top = 10.0
+margin_right = 168.0
+margin_bottom = 58.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="ItemMenu_RichTextLabel_ItemInfo" type="RichTextLabel" parent="Panel/WindowDialog_ItemMenu"]
+margin_left = 10.0
+margin_top = 70.0
+margin_right = 280.0
+margin_bottom = 170.0
+bbcode_enabled = true
+
+[node name="ItemMenu_Button_sellItem" type="Button" parent="Panel/WindowDialog_ItemMenu"]
+margin_left = 161.108
+margin_top = 190.0
+margin_right = 261.108
+margin_bottom = 220.0
+text = "Sell"
+
+[node name="ItemMenu_Button_UseItem" type="Button" parent="Panel/WindowDialog_ItemMenu"]
+margin_left = 32.0
+margin_top = 191.292
+margin_right = 132.0
+margin_bottom = 221.292
+text = "Use"
+
+[node name="WindowDialog_nouse" type="WindowDialog" parent="Panel"]
+pause_mode = 2
+editor/display_folded = true
+margin_left = 300.0
+margin_top = 130.0
+margin_right = 590.0
+margin_bottom = 370.0
+
+[node name="ItemMenu_RichTextLabel_ItemInfo" type="RichTextLabel" parent="Panel/WindowDialog_nouse"]
+margin_left = 67.2007
+margin_top = 71.4319
+margin_right = 242.201
+margin_bottom = 114.432
+bbcode_enabled = true
+text = "You try to use the object but nothing happens"
+
+[node name="Nouse_Button_Return" type="Button" parent="Panel/WindowDialog_nouse"]
+margin_left = 96.9932
+margin_top = 191.432
+margin_right = 196.993
+margin_bottom = 221.432
+text = "Return"
+
+[node name="WindowDialog_notenough" type="WindowDialog" parent="Panel"]
+pause_mode = 2
+editor/display_folded = true
+margin_left = 300.0
+margin_top = 130.0
+margin_right = 590.0
+margin_bottom = 370.0
+
+[node name="ItemMenu_RichTextLabel_ItemInfo" type="RichTextLabel" parent="Panel/WindowDialog_notenough"]
+margin_left = 67.2007
+margin_top = 71.4319
+margin_right = 242.201
+margin_bottom = 114.432
+bbcode_enabled = true
+text = "You try to use the object but nothing happens"
+
+[node name="Nouse_Button_Return" type="Button" parent="Panel/WindowDialog_notenough"]
+margin_left = 96.9932
+margin_top = 191.432
+margin_right = 196.993
+margin_bottom = 221.432
+text = "Return"
+
+[node name="WindowDialog_Cannotafford" type="WindowDialog" parent="Panel"]
+pause_mode = 2
+editor/display_folded = true
+margin_left = 300.0
+margin_top = 130.0
+margin_right = 590.0
+margin_bottom = 370.0
+
+[node name="ItemMenu_RichTextLabel_ItemInfo" type="RichTextLabel" parent="Panel/WindowDialog_Cannotafford"]
+margin_left = 64.0
+margin_top = 71.0
+margin_right = 213.0
+margin_bottom = 139.0
+bbcode_enabled = true
+text = "Sorry pal, you cannot afford this, quit wasting my time!"
+
+[node name="Cannotafford_Button_Return" type="Button" parent="Panel/WindowDialog_Cannotafford"]
+margin_left = 92.6973
+margin_top = 188.568
+margin_right = 192.697
+margin_bottom = 218.568
+text = "Return"
+
+[node name="Stats_Label" type="Label" parent="."]
+margin_left = 7.86395
+margin_top = 21.0732
+margin_right = 119.864
+margin_bottom = 267.073
+text = "Max Health:
+
+
+Max Armor:
+
+
+Physical Damage:
+
+
+Jump Speed:
+
+
+Max Gold:"
+align = 2
+
+[node name="Stats_Label2" type="Label" parent="."]
+margin_left = 13.7925
+margin_top = 39.5052
+margin_right = 133.793
+margin_bottom = 267.505
+text = "Health:
+
+
+Armor:
+
+
+Explosive Damage:
+
+
+Run Speed:
+
+
+Gold:"
+align = 2
+
+[node name="Mpart_Label" type="Label" parent="."]
+margin_left = 41.5682
+margin_top = 300.0
+margin_right = 105.568
+margin_bottom = 416.0
+text = "Big Talon:
+
+Big Tooth:
+
+Big Bone:
+
+Big Claw:"
+align = 2
+
+[node name="Max_Health_Label" type="Label" parent="."]
+margin_left = 141.908
+margin_top = 16.1072
+margin_right = 206.908
+margin_bottom = 35.1072
+text = "666"
+valign = 1
+
+[node name="Big_Talon_Label" type="Label" parent="."]
+margin_left = 130.277
+margin_top = 297.841
+margin_right = 195.277
+margin_bottom = 316.841
+text = "666"
+valign = 1
+
+[node name="Big_Bone_Label" type="Label" parent="."]
+margin_left = 130.277
+margin_top = 365.044
+margin_right = 195.277
+margin_bottom = 384.044
+text = "666"
+valign = 1
+
+[node name="Big_Tooth_Label" type="Label" parent="."]
+margin_left = 130.277
+margin_top = 331.442
+margin_right = 195.277
+margin_bottom = 350.442
+text = "666"
+valign = 1
+
+[node name="Big_Claw_Label" type="Label" parent="."]
+margin_left = 131.569
+margin_top = 398.645
+margin_right = 196.569
+margin_bottom = 417.645
+text = "666"
+valign = 1
+
+[node name="Max_Armor_Label" type="Label" parent="."]
+margin_left = 141.908
+margin_top = 67.5982
+margin_right = 206.908
+margin_bottom = 86.5982
+text = "666"
+valign = 1
+
+[node name="Phy_Damage_Label" type="Label" parent="."]
+margin_left = 141.908
+margin_top = 119.688
+margin_right = 206.908
+margin_bottom = 138.688
+text = "666"
+valign = 1
+
+[node name="Jumpspeed_Label" type="Label" parent="."]
+margin_left = 141.908
+margin_top = 169.982
+margin_right = 206.908
+margin_bottom = 188.982
+text = "666"
+valign = 1
+
+[node name="Max_Gold_Label" type="Label" parent="."]
+margin_left = 125.107
+margin_top = 219.677
+margin_right = 190.107
+margin_bottom = 238.677
+text = "666"
+valign = 1
+
+[node name="Health_Label" type="Label" parent="."]
+margin_left = 167.598
+margin_top = 37.2422
+margin_right = 232.598
+margin_bottom = 56.2422
+custom_colors/font_color = Color( 0.337255, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "666"
+valign = 1
+
+[node name="Armor_Label" type="Label" parent="."]
+margin_left = 167.598
+margin_top = 89.3332
+margin_right = 232.598
+margin_bottom = 108.333
+custom_colors/font_color = Color( 0.333333, 0.498039, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "666"
+valign = 1
+
+[node name="Exp_Damage_Label" type="Label" parent="."]
+margin_left = 167.598
+margin_top = 140.824
+margin_right = 232.598
+margin_bottom = 159.824
+custom_colors/font_color = Color( 0.870588, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "666"
+valign = 1
+
+[node name="Speed_Label" type="Label" parent="."]
+margin_left = 167.598
+margin_top = 191.118
+margin_right = 232.598
+margin_bottom = 210.118
+custom_colors/font_color = Color( 0.701961, 0.376471, 0.0588235, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "666"
+valign = 1
+
+[node name="Gold_Label" type="Label" parent="."]
+margin_left = 150.797
+margin_top = 240.813
+margin_right = 215.797
+margin_bottom = 259.813
+custom_colors/font_color = Color( 1, 0.937255, 0.00784314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "666"
+valign = 1
+
+[connection signal="pressed" from="Panel/store_item1" to="." method="_on_store_item1_pressed"]
+[connection signal="pressed" from="Panel/store_item2" to="." method="_on_store_item2_pressed"]
+[connection signal="pressed" from="Panel/store_item3" to="." method="_on_store_item3_pressed"]
+[connection signal="pressed" from="Panel/store_item4" to="." method="_on_store_item4_pressed"]
+[connection signal="pressed" from="Panel/store_item5" to="." method="_on_store_item5_pressed"]
+[connection signal="pressed" from="Panel/store_item6" to="." method="_on_store_item6_pressed"]
+[connection signal="pressed" from="Panel/store_item7" to="." method="_on_store_item7_pressed"]
+[connection signal="pressed" from="Panel/store_item8" to="." method="_on_store_item8_pressed"]
+[connection signal="pressed" from="Panel/store_item9" to="." method="_on_store_item9_pressed"]
+[connection signal="pressed" from="Panel/store_item10" to="." method="_on_store_item10_pressed"]
+[connection signal="pressed" from="Panel/store_item11_hp5" to="." method="_on_store_item11_hp5_pressed"]
+[connection signal="pressed" from="Panel/store_item39_nadepack" to="." method="_on_store_item_hp5_pressed"]
+[connection signal="pressed" from="Panel/store_item_40_stickypack" to="." method="_on_store_item_hp5_pressed"]
+[connection signal="pressed" from="Panel/store_item12" to="." method="_on_store_item12_pressed"]
+[connection signal="pressed" from="Panel/store_item13" to="." method="_on_store_item13_pressed"]
+[connection signal="pressed" from="Panel/store_item14" to="." method="_on_store_item14_pressed"]
+[connection signal="pressed" from="Panel/store_item15" to="." method="_on_store_item15_pressed"]
+[connection signal="pressed" from="Panel/store_item16" to="." method="_on_store_item16_pressed"]
+[connection signal="pressed" from="Panel/store_item17" to="." method="_on_store_item17_pressed"]
+[connection signal="pressed" from="Panel/store_item18" to="." method="_on_store_item19_pressed"]
+[connection signal="pressed" from="Panel/store_item19" to="." method="_on_store_item18_pressed"]
+[connection signal="pressed" from="Panel/store_item20" to="." method="_on_store_item20_pressed"]
+[connection signal="pressed" from="Panel/store_item21" to="." method="_on_store_item21_pressed"]
+[connection signal="pressed" from="Panel/store_item22" to="." method="_on_store_item29_pressed"]
+[connection signal="pressed" from="Panel/store_item23" to="." method="_on_store_item28_pressed"]
+[connection signal="pressed" from="Panel/store_item24" to="." method="_on_store_item27_pressed"]
+[connection signal="pressed" from="Panel/store_item25" to="." method="_on_store_item31_pressed"]
+[connection signal="pressed" from="Panel/store_item26" to="." method="_on_store_item26_pressed"]
+[connection signal="pressed" from="Panel/store_item27" to="." method="_on_store_item30_pressed"]
+[connection signal="pressed" from="Panel/store_item28" to="." method="_on_store_item12_pressed"]
+[connection signal="pressed" from="Panel/store_item29" to="." method="_on_store_item13_pressed"]
+[connection signal="pressed" from="Panel/store_item30" to="." method="_on_store_item20_pressed"]
+[connection signal="pressed" from="Panel/store_item31" to="." method="_on_store_item33_pressed"]
+[connection signal="pressed" from="Panel/store_item32" to="." method="_on_store_item32_pressed"]
+[connection signal="pressed" from="Panel/store_item33" to="." method="_on_store_item34_pressed"]
+[connection signal="pressed" from="Panel/store_item37" to="." method="_on_store_item34_pressed"]
+[connection signal="pressed" from="Panel/store_item34" to="." method="_on_store_item35_pressed"]
+[connection signal="pressed" from="Panel/store_item35" to="." method="_on_store_item37_pressed"]
+[connection signal="pressed" from="Panel/store_item36" to="." method="_on_store_item36_pressed"]
+[connection signal="pressed" from="Panel/store_item38" to="." method="_on_store_item36_pressed"]
+[connection signal="pressed" from="Panel/portal" to="." method="_on_store_item25_pressed"]
+[connection signal="pressed" from="Panel/key1" to="." method="_on_store_item23_pressed"]
+[connection signal="pressed" from="Panel/key3" to="." method="_on_store_item24_pressed"]
+[connection signal="item_rmb_selected" from="Panel/ItemList" to="." method="_on_ItemList_item_rmb_selected"]
+[connection signal="mouse_entered" from="Panel/ItemList" to="." method="_on_ItemList_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/ItemList" to="." method="_on_ItemList_mouse_exited"]
+[connection signal="pressed" from="Panel/WindowDialog_AddItemWindow/AddItemWindow_Button_AddItem" to="." method="_on_AddItemWindow_Button_AddItem_pressed"]
+[connection signal="pressed" from="Panel/WindowDialog_AddItemWindow/AddItemWindow_Button_Close" to="." method="_on_AddItemWindow_Button_Close_pressed"]
+[connection signal="pressed" from="Panel/WindowDialog_SplitItemWindow/SplitItemWindow_Button_Split" to="." method="_on_SplitItemWindow_Button_Split_pressed"]
+[connection signal="pressed" from="Panel/WindowDialog_ItemMenu/ItemMenu_Button_sellItem" to="." method="_on_ItemMenu_Button_sellItem_pressed"]
+[connection signal="pressed" from="Panel/WindowDialog_ItemMenu/ItemMenu_Button_UseItem" to="." method="_on_ItemMenu_Button_UseItem_pressed"]
+[connection signal="pressed" from="Panel/WindowDialog_nouse/Nouse_Button_Return" to="." method="_on_Nouse_Button_Return_pressed"]
+[connection signal="pressed" from="Panel/WindowDialog_notenough/Nouse_Button_Return" to="." method="_on_Nouse_Button_Return_pressed"]
+[connection signal="pressed" from="Panel/WindowDialog_Cannotafford/Cannotafford_Button_Return" to="." method="_on_Cannotafford_Button_Return_pressed"]

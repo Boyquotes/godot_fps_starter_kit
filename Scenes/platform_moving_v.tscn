@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.00996876, 0.0677276, 0.0373611, 0, 0, 0, 0, 0, 0, 0.037611, 29.4174, -0.012198 ),
+"tilts": PoolRealArray( 0, 0 )
+}
+
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( -8, 15, 8, 8, 15, -8, 8, 15, 8, -8, 15, -8, -8, -15, 8, 8, -15, -8, 8, -15, 8, -8, -15, -8, 8, 15, 8, -8, 15, -8, 8, 15, -8, -8, 15, 8, 8, -15, 8, -8, -15, -8, 8, -15, -8, -8, -15, 8, 8, 15, 8, -8, -15, 8, -8, 15, 8, 8, -15, 8, 8, 15, -8, -8, -15, -8, -8, 15, -8, 8, -15, -8 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 16, 30, 16 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "movev"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path/PathFollow:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 4, 6, 9.5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.99, 0.99, 0.0, 0.0 ]
+}
+
+[node name="V_Platform" type="Spatial"]
+
+[node name="Path" type="Path" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="Path"]
+transform = Transform( 0.999993, 0.00364786, 2.92152e-005, -0.00364798, 0.99995, 0.00926382, 4.57944e-006, -0.00926387, 0.999957, -0.00191083, 5.03828, 0.028968 )
+offset = 4.97553
+
+[node name="RemoteTransform" type="RemoteTransform" parent="Path/PathFollow"]
+
+[node name="KinematicBody" type="KinematicBody" parent="Path/PathFollow"]
+transform = Transform( 1, 0.000224632, -1.87027e-006, -0.000224635, 0.999999, -0.00169454, 1.48962e-006, 0.00169454, 0.999999, 0.00920659, -0.430909, -0.0355975 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Path/PathFollow/KinematicBody"]
+transform = Transform( 1, 1.01323e-011, -5.45697e-012, 9.74154e-012, 1, -4.65661e-010, 0, 0, 1, -0.00325629, -14.0947, 0.00878321 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Path/PathFollow/KinematicBody"]
+transform = Transform( 1, 1.01323e-011, -3.63798e-012, 9.74154e-012, 1, -4.65661e-010, 0, 0, 1, -0.00325629, -14.0947, 0.00878321 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "movev"
+playback_process_mode = 0
+anims/movev = SubResource( 4 )
+

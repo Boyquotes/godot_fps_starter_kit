@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Breakable.gd" type="Script" id=1]
+[ext_resource path="res://broken_breakable.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CylinderMesh" id=1]
+top_radius = 3.0
+bottom_radius = 2.0
+height = 1.0
+
+[sub_resource type="CylinderMesh" id=2]
+top_radius = 5.0
+bottom_radius = 4.5
+height = 0.5
+
+[sub_resource type="CylinderMesh" id=3]
+height = 3.0
+
+[sub_resource type="CylinderShape" id=4]
+radius = 4.93637
+height = 4.5813
+
+[node name="Breakable_Tableround" type="Spatial"]
+
+[node name="Breakable" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0 )
+script = ExtResource( 1 )
+destroyed_breakable = ExtResource( 2 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49602, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, -1.00398, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.21653, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.70439, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="Collision_Shape" type="CollisionShape" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15794, 0 )
+shape = SubResource( 4 )
+
+[node name="Broken_Breakable_Holder" type="Spatial" parent="."]
+
+[node name="Loot_Holder" type="Spatial" parent="."]
+
+[node name="Loot_Holder2" type="Spatial" parent="."]
+
+[node name="Loot_Holder3" type="Spatial" parent="."]
+
+[node name="Loot_Holder4" type="Spatial" parent="."]
+
+[node name="Loot_Holder5" type="Spatial" parent="."]
+
+[node name="Loot_Holder6" type="Spatial" parent="."]
+
+[node name="Loot_Holder7" type="Spatial" parent="."]
+
+[node name="Loot_Holder8" type="Spatial" parent="."]
+

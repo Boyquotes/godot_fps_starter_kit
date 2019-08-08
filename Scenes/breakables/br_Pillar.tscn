@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Breakable.gd" type="Script" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 2, 4, 2 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 0.5, 3, 0.5 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 0.5, 0.5, 6 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 1, 26, 1 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 3.17265, 2.22038, 3.04043 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.512986, 6.66546, 0.492312 )
+
+[node name="Breakable_Pillar" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0429864, 0, 0 )
+
+[node name="Breakable" type="StaticBody" parent="."]
+script = ExtResource( 1 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00978899, 14.1714, -0.00638962 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance11" type="MeshInstance" parent="Breakable"]
+transform = Transform( -0.0409337, 0.550477, 0.833846, 0, 0.834546, -0.550939, -0.999162, -0.022552, -0.0341611, 1.55934, 14.5895, 0.00953868 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="support" type="Spatial" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14048, 0, 0 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="Breakable/support"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0348973, 15.9658, -0.00638962 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="Breakable/support"]
+transform = Transform( 0.0118875, 0, -0.999929, 0, 1, 0, 0.999929, 0, 0.0118875, 0.0659075, 15.9111, -0.0175692 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance9" type="MeshInstance" parent="Breakable/support"]
+transform = Transform( 1, 0, 0, 0, 0.834546, -0.550939, 0, 0.550939, 0.834546, 0.0302775, 14.6531, 1.6859 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance10" type="MeshInstance" parent="Breakable/support"]
+transform = Transform( 0.0118875, -0.5509, -0.834487, 0, 0.834546, -0.550939, 0.999929, 0.00654931, 0.00992069, -1.62631, 14.5895, -0.00207402 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance11" type="MeshInstance" parent="Breakable/support"]
+transform = Transform( -0.999578, -0.0160066, -0.0242463, 0, 0.834546, -0.550939, 0.0290533, -0.550706, -0.834193, 0.0818872, 14.6442, -1.67844 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0869088, -0.213247, 0.035226 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="Pillar2" type="CollisionShape" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.256639, 14.0382, 0 )
+shape = SubResource( 5 )
+
+[node name="Collision_Shape" type="CollisionShape" parent="Breakable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0942388, 5.49791, -0.00258422 )
+shape = SubResource( 6 )
+
+[node name="Broken_Breakable_Holder" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0977368, 0, 0 )
+
+[node name="Loot_Holder" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3094, 0, 0 )
+
+[node name="Loot_Holder2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.86285, 0, 0 )
+
+[node name="Loot_Holder3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0977368, 0, 3.43488 )
+
+[node name="Loot_Holder4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0977368, 0, -4.66832 )
+
+[node name="Loot_Holder5" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97394, 0, 2.79323 )
+
+[node name="Loot_Holder6" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88445, 0, 3.02459 )
+
+[node name="Loot_Holder7" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.22723, 0, -3.62717 )
+
+[node name="Loot_Holder8" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.80471, 0, -2.71299 )
+

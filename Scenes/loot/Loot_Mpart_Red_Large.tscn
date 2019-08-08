@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/loot/Loot_Mpart_Red_Large.gd" type="Script" id=1]
+[ext_resource path="res://assets/claw/13636_Raptor_Claw_Fossil_v2_l3.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 3, 3.13746, 2.4 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Health_Anim"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Holder:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 180, 0 ), Vector3( 0, 360, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Holder:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 1, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 1, 0 ), Vector3( 0, 0, 0 ) ]
+}
+
+[node name="Mpart_Red_Large" type="Spatial"]
+script = ExtResource( 1 )
+item_var = 38
+
+[node name="Holder" type="Spatial" parent="."]
+transform = Transform( -0.986687, 0, 0.162628, 0, 1, 0, -0.162628, 0, -0.986687, 0, 0.103994, 0 )
+
+[node name="Item_Pickup_Trigger" type="Area" parent="Holder"]
+
+[node name="Shape_Kit" type="CollisionShape" parent="Holder/Item_Pickup_Trigger"]
+transform = Transform( 1, 0, -1.49012e-008, 0, 1, 0, 1.49012e-008, 0, 1, 0, 1.77552, 0 )
+shape = SubResource( 1 )
+
+[node name="13636_Raptor_Claw_Fossil_v2_l3" type="MeshInstance" parent="Holder"]
+transform = Transform( -6.55671e-008, 1.5, -4.47035e-008, -1.5, -6.55671e-008, -2.70888e-015, -4.66293e-015, 4.47035e-008, 1.5, -0.394021, 1.3539, -0.271995 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="SpotLight" type="SpotLight" parent="Holder"]
+transform = Transform( 1, 1.49012e-008, -7.45058e-009, 0, 0.707107, 0.707106, 1.49012e-008, -0.707107, 0.707107, -0.2298, 13.0649, 11.31 )
+light_color = Color( 0.933333, 0.113725, 0.113725, 1 )
+light_energy = 4.0
+light_specular = 1.0
+light_bake_mode = 2
+spot_range = 19.2263
+spot_angle = 14.9893
+
+[node name="SpotLight2" type="SpotLight" parent="Holder"]
+transform = Transform( 1, 1.49012e-008, 7.45058e-009, 0, -0.707107, 0.707106, 1.49012e-008, -0.707107, -0.707107, -0.27941, 13.0649, -12.8032 )
+light_color = Color( 0.933333, 0.113725, 0.113725, 1 )
+light_energy = 4.0
+light_specular = 1.0
+light_bake_mode = 2
+spot_range = 19.2263
+spot_angle = 14.9893
+
+[node name="OmniLight" type="OmniLight" parent="Holder"]
+transform = Transform( 1, 0, -2.98023e-008, 0, 1, 0, 1.49012e-008, 0, 1, -0.33574, 0.193035, 0.0553374 )
+light_color = Color( 0.933333, 0.113725, 0.113725, 1 )
+light_energy = 4.0
+light_specular = 1.0
+omni_range = 3.07019
+
+[node name="Animation_Player" type="AnimationPlayer" parent="."]
+autoplay = "Health_Anim"
+anims/Health_Anim = SubResource( 2 )
+
+[connection signal="body_entered" from="Holder/Item_Pickup_Trigger" to="." method="_on_Item_Pickup_Trigger_body_entered"]

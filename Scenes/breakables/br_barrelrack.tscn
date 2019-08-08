@@ -1,0 +1,165 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Breakable.gd" type="Script" id=1]
+[ext_resource path="res://broken_breakable.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 1, 22, 0.5 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 3, 3, 7 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 1, 1, 6 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 12.3212, 10.3034, 1.63959 )
+
+[node name="Breakable_barrelrack" type="Spatial"]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+script = ExtResource( 1 )
+destroyed_breakable = ExtResource( 2 )
+
+[node name="MeshInstance7" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 4.78952 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance6" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000287056, 10.9684, 0.565565 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance9" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0003, 10.9684, 0.565565 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance13" type="MeshInstance" parent="StaticBody"]
+transform = Transform( -4.37114e-008, -1, 0, 6.70552e-008, -3.10862e-015, 1, -1, 4.37114e-008, 6.70552e-008, 10.5, 7.2238, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance19" type="MeshInstance" parent="StaticBody"]
+transform = Transform( -4.37114e-008, -1, 0, 6.70552e-008, -3.10862e-015, 1, -1, 4.37114e-008, 6.70552e-008, 10.5, 7.2238, 5.4996 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance15" type="MeshInstance" parent="StaticBody"]
+transform = Transform( -4.37114e-008, -1, 0, 6.70552e-008, -3.10862e-015, 1, -1, 4.37114e-008, 6.70552e-008, 10.5, 0.223804, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance16" type="MeshInstance" parent="StaticBody"]
+transform = Transform( -4.37114e-008, -1, 0, 6.70552e-008, -3.10862e-015, 1, -1, 4.37114e-008, 6.70552e-008, 10.5, 0.223804, 5.5 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance14" type="MeshInstance" parent="StaticBody"]
+transform = Transform( -4.37114e-008, -1, 0, 6.70552e-008, -3.10862e-015, 1, -1, 4.37114e-008, 6.70552e-008, 10.5, 14.2238, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance20" type="MeshInstance" parent="StaticBody"]
+transform = Transform( -4.37114e-008, -1, 0, 6.70552e-008, -3.10862e-015, 1, -1, 4.37114e-008, 6.70552e-008, 10.5, 14.2238, 5.4996 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance11" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 11, 0.581066 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance5" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 11, 0.581066 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 11, 4.78952 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance10" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 11, 4.78952 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance12" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 11, 4.78952 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 7.00029, 7.17197, 2.4845 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance17" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 7.00029, 14.5431, 2.4845 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 13.9552, 7.17197, 2.4845 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance18" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 13.9552, 14.5431, 2.4845 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance21" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0558, 7.31371, 2.79843 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance24" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00805855, 7.31371, 2.79843 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance22" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0558, 14.2362, 2.79843 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance26" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00805855, 14.2362, 2.79843 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance23" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0558, 0.945915, 2.79843 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance25" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00805855, 0.945915, 2.79843 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="Collision_Shape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.92632, 11.4335, 2.57523 )
+shape = SubResource( 4 )
+
+[node name="Broken_Breakable_Holder" type="Spatial" parent="."]
+
+[node name="Loot_Holder" type="Spatial" parent="."]
+
+[node name="Loot_Holder2" type="Spatial" parent="."]
+
+[node name="Loot_Holder3" type="Spatial" parent="."]
+
+[node name="Loot_Holder4" type="Spatial" parent="."]
+
+[node name="Loot_Holder5" type="Spatial" parent="."]
+
+[node name="Loot_Holder6" type="Spatial" parent="."]
+
+[node name="Loot_Holder7" type="Spatial" parent="."]
+
+[node name="Loot_Holder8" type="Spatial" parent="."]
+

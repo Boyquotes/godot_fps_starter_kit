@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/fire.tscn" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 3.44756, 2.29721, 3.45966 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 5, 1, 2 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 10, 10, 10 )
+
+[node name="Lightobject_Campfire" type="Spatial"]
+
+[node name="campfire" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="campfire"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.204397, 0.273194, 0 )
+shape = SubResource( 1 )
+
+[node name="fire" parent="campfire" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356963, 0.188482, 1.34808 )
+
+[node name="MeshInstance" type="MeshInstance" parent="campfire"]
+transform = Transform( 0.680808, -0.301134, -0.667697, 0.446846, 0.893049, 0.0528512, 0.580371, -0.334339, 0.742555, -0.766766, -0.311821, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="campfire"]
+transform = Transform( -0.135776, -0.254193, -0.957575, 0.285616, 0.915449, -0.283508, 0.948677, -0.311992, -0.0516945, 1.49134, -0.770568, 0.0301014 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="campfire"]
+transform = Transform( 0.977385, 0, 0.211466, 0, 1, 0, -0.211466, 0, 0.977385, 0.13869, -1.5, 1.34205 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="campfire"]
+transform = Transform( 0.910225, 0.321286, 0.261276, 0.207528, 0.192087, -0.959184, -0.35836, 0.927296, 0.108167, 1.54015, -1.5, 2.36278 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Area" type="Area" parent="campfire"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="campfire/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
+shape = SubResource( 3 )
+

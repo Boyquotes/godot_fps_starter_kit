@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/fire.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CylinderMesh" id=1]
+top_radius = 3.0
+bottom_radius = 2.0
+height = 1.0
+
+[sub_resource type="CylinderMesh" id=2]
+height = 10.0
+
+[sub_resource type="CylinderMesh" id=3]
+top_radius = 0.1
+bottom_radius = 3.0
+
+[sub_resource type="CylinderShape" id=4]
+radius = 1.64894
+height = 11.4702
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 10, 10, 10 )
+
+[node name="Lightobject_Lamp_Tall" type="Spatial"]
+
+[node name="lamp" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="lamp"]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, -1.00398, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="lamp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0188322, 4.46159, -0.0386219 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="lamp"]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.0127115, 8.00857, 0.0113254 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="lamp"]
+transform = Transform( 1, 0, 0, 0, -0.999713, -0.0239487, 0, 0.0239487, -0.999713, 0, 7.21533, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="Collision_Shape" type="CollisionShape" parent="lamp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.68848, 0 )
+shape = SubResource( 4 )
+
+[node name="fire" parent="lamp" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.077075, 9.5068, -0.0578804 )
+
+[node name="Area" type="Area" parent="lamp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="lamp/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="lamp/Area" to="lamp" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="lamp/Area" to="lamp" method="_on_Area_body_exited"]

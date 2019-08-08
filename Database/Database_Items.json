@@ -1,0 +1,594 @@
+{
+	"0": {
+		"name": "",
+		"icon": "res://Database/Item_Icons/empty_slot.png",
+		"type": "misc",
+		"weight": 0.0,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "",
+		"sell_price": 0,
+		"effect": 0
+	},
+	
+	"1": {
+		"name": "Health Potion",
+		"icon": "res://Database/Item_Icons/genericItem_color_108.png",
+		"type": "consumable",
+		"weight": 1.1,
+		"stackable": true,
+		"stack_limit": 10,
+		"description": "Health Potion that cures 50 health.",
+		"sell_price": 95,
+		"effect": 30
+	},
+	
+	"2": {
+		"name": "Angle Grinder",
+		"icon": "res://Database/Item_Icons/genericItem_color_002.png",
+		"type": "consumable",
+		"weight": 10.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Repairs 200 Armor.",
+		"sell_price": 411,
+		"effect": 36
+	},
+	
+	"3": {
+		"name": "Pliers",
+		"icon": "res://Database/Item_Icons/genericItem_color_009.png",
+		"type": "consumable",
+		"weight": 1.1,
+		"stackable": true,
+		"stack_limit": 10,
+		"description": "Repairs 100 Armor.",
+		"sell_price": 206,
+		"effect": 35
+	},
+	
+	"4": {
+		"name": "Wrench",
+		"icon": "res://Database/Item_Icons/genericItem_color_004.png",
+		"type": "consumable",
+		"weight": 9.5,
+		"stackable": true,
+		"stack_limit": 10,
+		"description": "Repairs 5 Armor.",
+		"sell_price": 15,
+		"effect": 33
+	},
+	
+	"5": {
+		"name": "Screw Driver",
+		"icon": "res://Database/Item_Icons/genericItem_color_005.png",
+		"type": "consumable",
+		"weight": 9.3,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Repairs 50 Armor.",
+		"sell_price": 104,
+		"effect": 34
+	},
+	
+	"6": {
+		"name": "Pistol Max Ammo +5",
+		"icon": "res://Database/Item_Icons/genericItem_color_076.png",
+		"type": "consumable",
+		"weight": 0.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A weapon upgrade that adds 5 bullet to pistol max ammo.",
+		"sell_price": 1007,
+		"effect": 13
+	},
+	
+	"7": {
+		"name": "Pistol Max Ammo +15",
+		"icon": "res://Database/Item_Icons/genericItem_color_075.png",
+		"type": "misc",
+		"weight": 0.87,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A weapon upgrade that adds 15 bullet to pistol max ammo.",
+		"sell_price": 3027,
+		"effect": 14
+	},
+	
+	"8": {
+		"name": "Vaccine",
+		"icon": "res://Database/Item_Icons/genericItem_color_093.png",
+		"type": "misc",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A Vaccine that gives 10 to max health!",
+		"sell_price": 10030,
+		"effect": 2
+	},
+	
+	"9": {
+		"name": "Medicine Capsule",
+		"icon": "res://Database/Item_Icons/genericItem_color_090.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A miracle medicine adds one to max health.",
+		"sell_price": 1040,
+		"effect": 1
+	},
+	
+	"10": {
+		"name": "First Aid Kit",
+		"icon": "res://Database/Item_Icons/genericItem_color_102.png",
+		"type": "consumable",
+		"weight": 2.8,
+		"stackable": true,
+		"stack_limit": 30,
+		"description": "A collection of supplies and equipment that is used to give medical treatment. Restores up to 100 health.",
+		"sell_price": 198,
+		"effect": 31
+	},
+	
+	"11": {
+		"name": "Bandage",
+		"icon": "res://Database/Item_Icons/genericItem_color_100.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": true,
+		"stack_limit": 30,
+		"description": "Patch up that open wound to avoid exposure and infection. Restores a tiny amount of HP.",
+		"sell_price": 12,
+		"effect": 29
+	},
+	
+	"12": {
+		"name": "Chaingun Ammo +50",
+		"icon": "res://Database/Item_Icons/genericItem_color_141.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Chaingun that adds 50 to max ammo.",
+		"sell_price": 1000,
+		"effect": 19
+	},
+	
+	"13": {
+		"name": "Chaingun Ammo +150",
+		"icon": "res://Database/Item_Icons/genericItem_color_142.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Chaingun that adds 150 to max ammo.",
+		"sell_price": 3000,
+		"effect": 20
+	},
+	
+	"14": {
+		"name": "Rifle Ammo +20",
+		"icon": "res://Database/Item_Icons/genericItem_color_145.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Rifle that adds 20 to max ammo.",
+		"sell_price": 2000,
+		"effect": 15
+	},
+	
+	"15": {
+		"name": "Rifle Ammo +50",
+		"icon": "res://Database/Item_Icons/genericItem_color_145.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Rifle that adds 50 to max ammo.",
+		"sell_price": 3000,
+		"effect": 16
+	},
+	
+	"16": {
+		"name": "Pistol Clip Size +2",
+		"icon": "res://Database/Item_Icons/genericItem_color_041.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Pistol that adds 5 to the clip size.",
+		"sell_price": 2000,
+		"effect": 5
+	},
+	
+	"17": {
+		"name": "Pistol Clip Size +5",
+		"icon": "res://Database/Item_Icons/genericItem_color_042.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Pistol that adds 5 to the clip size.",
+		"sell_price": 3000,
+		"effect": 6
+		},
+	
+	"18": {
+		"name": "Shotgun Ammo +4",
+		"icon": "res://Database/Item_Icons/genericItem_color_039.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Shotgun that adds 4 to max ammo.",
+		"sell_price": 2000,
+		"effect": 17
+	},
+	
+	"19": {
+		"name": "Shotgun Ammo +10",
+		"icon": "res://Database/Item_Icons/genericItem_color_045.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Shotgun that adds 10 to max ammo.",
+		"sell_price": 3000,
+		"effect": 18
+		
+	},
+	
+	"20": {
+		"name": "Speed Potion",
+		"icon": "res://Database/Item_Icons/genericItem_color_105.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Potion that adds to max speed.",
+		"sell_price": 15024,
+		"effect": 27
+		
+	},
+	
+	"21": {
+		"name": "Huge Health Potion",
+		"icon": "res://Database/Item_Icons/genericItem_color_105.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Potion that cures 200 health!",
+		"sell_price": 401,
+		"effect": 32
+	},
+	
+	"22": {
+		"name": "Shotgun Clip Size +1",
+		"icon": "res://Database/Item_Icons/genericItem_color_141.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to shotgun that adds 1 to clip size.",
+		"sell_price": 1000,
+		"effect": 9
+	},
+	
+	"23": {
+		"name": "Shotgun Clip Size +3",
+		"icon": "res://Database/Item_Icons/genericItem_color_142.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to shotgun that adds 3 to clip size.",
+		"sell_price": 3000,
+		"effect": 10
+	},
+	
+	"24": {
+		"name": "Rifle Clip Size +10",
+		"icon": "res://Database/Item_Icons/genericItem_color_145.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Rifle that adds 10 to clip size.",
+		"sell_price": 2000,
+		"effect": 7
+	},
+	
+	"25": {
+		"name": "Rifle Clip Size +20",
+		"icon": "res://Database/Item_Icons/genericItem_color_145.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Rifle that adds 20 to clip size.",
+		"sell_price": 3000,
+		"effect": 8
+	},
+	
+	"26": {
+		"name": "Chiangun Clip Size +20",
+		"icon": "res://Database/Item_Icons/genericItem_color_041.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Chaingun that adds 20 to the chain size.",
+		"sell_price": 2000,
+		"effect": 11
+	},
+	
+	"27": {
+		"name": "Chaingun Clip Size +50",
+		"icon": "res://Database/Item_Icons/genericItem_color_042.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade to Chaingun that adds 50 to the chain size.",
+		"sell_price": 3000,
+		"effect": 12
+		},
+	
+	"28": {
+		"name": "Grenades Max Ammount +1",
+		"icon": "res://Database/Item_Icons/genericItem_color_039.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Plus 1 to max greandes.",
+		"sell_price": 6000,
+		"effect": 21
+	},
+	
+	"29": {
+		"name": "Sticky Grenades Max Ammount +1",
+		"icon": "res://Database/Item_Icons/genericItem_color_045.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Plus 1 to max sticky grenades.",
+		"sell_price": 6000,
+		"effect": 22
+	},
+	
+	"30": {
+		"name": "Jump Potion",
+		"icon": "res://Database/Item_Icons/genericItem_color_105.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Potion that adds to max jump height.",
+		"sell_price": 15024,
+		"effect": 28
+	},
+	
+	"31": {
+		"name": "Physical Damage +1",
+		"icon": "res://Database/Item_Icons/genericItem_color_105.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade that grants 1 to Physical Damage.",
+		"sell_price": 9024,
+		"effect": 23
+	},
+	
+	"32": {
+		"name": "Physical Damage +3",
+		"icon": "res://Database/Item_Icons/genericItem_color_105.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade that grants 3 to Physical Damage!",
+		"sell_price": 28024,
+		"effect": 24
+	},
+	
+	"33": {
+		"name": "Explosive Damage +1",
+		"icon": "res://Database/Item_Icons/genericItem_color_105.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade that grants 1 to Explosive Damage.",
+		"sell_price": 9024,
+		"effect": 25
+	},
+	
+	"34": {
+		"name": "Explosive Damage +3",
+		"icon": "res://Database/Item_Icons/genericItem_color_105.png",
+		"type": "consumable",
+		"weight": 0.1,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Upgrade that grants 3 to Explosive Damage!",
+		"sell_price": 28024,
+		"effect": 26
+	},
+	
+	"35": {
+		"name": "Max Armor +1",
+		"icon": "res://Database/Item_Icons/genericItem_color_093.png",
+		"type": "misc",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A shard of armor that gives 1 to max armor!",
+		"sell_price": 1040,
+		"effect": 3
+	},
+	
+	"36": {
+		"name": "Max Armor 10",
+		"icon": "res://Database/Item_Icons/genericItem_color_093.png",
+		"type": "misc",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A armor plate that gives 10 to max armor!",
+		"sell_price": 10030,
+		"effect": 4
+	},
+	
+	"37": {
+		"name": "Large Tooth",
+		"icon": "res://Database/Item_Icons/genericItem_color_093.png",
+		"type": "mpart",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A Large Tooth. Can break down to 4 teeth, or be used to make an upgrade.",
+		"sell_price": 4030,
+		"effect": 4
+	},
+	
+	"38": {
+		"name": "Large Talon",
+		"icon": "res://Database/Item_Icons/genericItem_color_093.png",
+		"type": "mpart",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A Large Talon. Can break down to 4 Talons, or be used to make an upgrade.",
+		"sell_price": 4030,
+		"effect": 4
+	},
+	
+	"39": {
+		"name": "Large Claw",
+		"icon": "res://Database/Item_Icons/genericItem_color_093.png",
+		"type": "mpart",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A Large Claw. Can break down to 4 Claws, or be used to make an upgrade.",
+		"sell_price": 4030,
+		"effect": 4
+	},
+	
+	"40": {
+		"name": "Large Bone",
+		"icon": "res://Database/Item_Icons/genericItem_color_093.png",
+		"type": "mpart",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A Large Bone. Can break down to 4 Bones, or be used to make an upgrade.",
+		"sell_price": 4030,
+		"effect": 4
+	},
+	"41": {
+		"name": "Key 1",
+		"icon": "res://Database/Item_Icons/genericItem_color_093.png",
+		"type": "misc",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A Key that opens green doors and chests",
+		"sell_price": 4030,
+		"effect": 41
+	},
+	"42": {
+		"name": "Key 2",
+		"icon": "res://Database/Item_Icons/genericItem_color_093.png",
+		"type": "misc",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A Key that opens yellow doors and chests",
+		"sell_price": 10030,
+		"effect": 42
+	},
+	"43": {
+		"name": "Key 3",
+		"icon": "res://Database/Item_Icons/genericItem_color_093.png",
+		"type": "misc",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "A Key that opens red doors and chests",
+		"sell_price": 10030,
+		"effect": 43
+	},
+	"44": {
+		"name": "Claw",
+		"icon": "res://Database/Item_Icons/genericItem_color_165.png",
+		"type": "mpart",
+		"weight": 2.5,
+		"stackable": true,
+		"stack_limit": 99,
+		"description": "A monster claw. In perfect condition.",
+		"sell_price": 2030,
+		"effect": 44
+	},
+	"45": {
+		"name": "Talon",
+		"icon": "res://Database/Item_Icons/genericItem_color_166.png",
+		"type": "mpart",
+		"weight": 2.5,
+		"stackable": true,
+		"stack_limit": 99,
+		"description": "A Monster Talon. Great quality.",
+		"sell_price": 2030,
+		"effect": 45
+	},
+	"46": {
+		"name": "Tooth",
+		"icon": "res://Database/Item_Icons/genericItem_color_167.png",
+		"type": "mpart",
+		"weight": 2.5,
+		"stackable": true,
+		"stack_limit": 99,
+		"description": "A Large monster tooth. Great shape.",
+		"sell_price": 2030,
+		"effect": 46
+	},
+	"47": {
+		"name": "Bone",
+		"icon": "res://Database/Item_Icons/genericItem_color_164.png",
+		"type": "mpart",
+		"weight": 2.5,
+		"stackable": true,
+		"stack_limit": 99,
+		"description": "A monster Bone. Very strong.",
+		"sell_price": 2030,
+		"effect": 47
+	},
+	"48": {
+		"name": "Grenade Pack",
+		"icon": "res://Database/Item_Icons/genericItem_color_166.png",
+		"type": "mpart",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Pack of extra Grenades.",
+		"sell_price": 3030,
+		"effect": 48
+	},
+	"49": {
+		"name": "Sticky Grenade Pack",
+		"icon": "res://Database/Item_Icons/genericItem_color_166.png",
+		"type": "mpart",
+		"weight": 2.5,
+		"stackable": false,
+		"stack_limit": 1,
+		"description": "Pack of extra Sticky Grenades.",
+		"sell_price": 3030,
+		"effect": 49
+	},
+}

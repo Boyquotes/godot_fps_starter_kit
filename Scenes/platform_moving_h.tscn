@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0.04814, 0.481791, -0.0615201, 0, 0, 0, 0, 0, 0, 23.8626, 0.467011, -0.114092 ),
+"tilts": PoolRealArray( 0, 0 )
+}
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 15, 0.5, 5 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 30, 1, 10 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "moveh"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path/PathFollow:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 4, 6, 9.5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.99, 0.99, 0.0, 0.0 ]
+}
+
+[node name="H_Platform" type="Spatial"]
+
+[node name="Path" type="Path" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="Path"]
+transform = Transform( 0.999977, 0.00322429, 0.00586521, -0.00327896, 0.999951, 0.00933454, -0.00583483, -0.00935357, 0.999939, 15.0988, 0.47245, -0.0947453 )
+offset = 15.0535
+
+[node name="RemoteTransform" type="RemoteTransform" parent="Path/PathFollow"]
+
+[node name="KinematicBody" type="KinematicBody" parent="Path/PathFollow"]
+transform = Transform( 1, 0.000224632, -1.87027e-006, -0.000224635, 0.999999, -0.00169454, 1.48962e-006, 0.00169454, 0.999999, 0.00920659, -0.430909, -0.0355975 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Path/PathFollow/KinematicBody"]
+transform = Transform( 1, 1.01323e-011, -7.27596e-012, -2.23103e-010, 1, 0, 0, 0, 1, -14.9617, -4.62268, 0.0734933 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Path/PathFollow/KinematicBody"]
+transform = Transform( 1, 1.01323e-011, -1.09139e-011, 9.74154e-012, 1, -4.65661e-010, 0, 0, 1, -14.956, -4.63602, 0.0805036 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "moveh"
+playback_process_mode = 0
+anims/moveh = SubResource( 4 )
+
